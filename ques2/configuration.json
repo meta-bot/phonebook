@@ -1,0 +1,9 @@
+{
+  "database": {
+    "host_address": "db.kbc.com",
+    "name": "hplf",
+    "username": "hplf",
+    "password": 1234,
+    "port": 5432
+  }
+}

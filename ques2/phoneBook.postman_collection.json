@@ -1,0 +1,160 @@
+{
+	"info": {
+		"_postman_id": "e90b1cbf-a06c-4c75-aa2a-56237c8c9389",
+		"name": "phoneBook",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "addContact",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "Basic RXhwbG9yZXI6S29uYXNsQDEyMw==",
+						"type": "text"
+					},
+					{
+						"key": "Accept",
+						"value": "application/json",
+						"type": "text"
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"type": "text"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"anando\",\n    \"number\": \"01521212217\"\n}"
+				},
+				"url": {
+					"raw": "http://localhost:3000/phoneBook/addContact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"phoneBook",
+						"addContact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "deleteContact",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"number\": \"01521212217\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/phoneBook/deleteContact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"phoneBook",
+						"deleteContact"
+					]
+				}
+			},
+			"response": []
+		},
+		{
+			"name": "getContactDetails",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"number\": \"01521212217\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/phoneBook/getContactDetails",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"phoneBook",
+						"getContactDetails"
+					]
+				},
+				"description": "Contact details of any user upon his number"
+			},
+			"response": []
+		},
+		{
+			"name": "getAll",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": {
+					"raw": "http://localhost:3000/phoneBook/getAll",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"phoneBook",
+						"getAll"
+					]
+				},
+				"description": "returns list of all data"
+			},
+			"response": []
+		},
+		{
+			"name": "updateContact",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n    \"name\": \"anando\",\n    \"currNumber\": \"01521212217\",\n    \"newNumber\": \"01885512931\"\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": {
+					"raw": "http://localhost:3000/phoneBook/updateContact",
+					"protocol": "http",
+					"host": [
+						"localhost"
+					],
+					"port": "3000",
+					"path": [
+						"phoneBook",
+						"updateContact"
+					]
+				},
+				"description": "update a contact number"
+			},
+			"response": []
+		}
+	],
+	"protocolProfileBehavior": {}
+}
